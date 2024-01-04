@@ -1,4 +1,4 @@
-# Multi-temporal-SAR-image-classification
+# SAR Image Time Series for Land Cover Mapping via Sparse Local-Global Temporal Transformer Network
 
 ## Dataset 1 （Semantic Segmentation Based on Temporal Features: Learning of Temporal–Spatial Information From Time-Series SAR Images for Paddy Rice Mapping，TGRS，2022）
 
