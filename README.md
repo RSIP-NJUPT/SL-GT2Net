@@ -82,7 +82,9 @@ pip install cupy # 13.0.0 very slowly
 
 
 ### Training
-  
+
+
+
 - single gpu training
 
 ```shell
@@ -102,6 +104,11 @@ CUDA_VISIABLE_DEVICES=0,1,2,3 tools/dist_train.sh configs/slgt2/slgt2_224x224_40
 
 
 ## Testing
+
+
+- pretrained model and training logs
+
+You can download by [Baidu Netdisk](https://pan.baidu.com/s/1kmdtT97en4wfaSRQLYYNlw) (access code: 1234) or [Google Drive](https://drive.google.com/drive/folders/1lqT1fFq_8w6FZH4e-BvXIY_EqFvd7iWI?usp=drive_link).
 
 - single gpu testing
 
