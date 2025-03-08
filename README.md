@@ -13,7 +13,7 @@ If this codebase is helpful for you, please consider give me a star ⭐ 😊.
 * Step 1: Create a conda environment
 
 ```shell
-conda create --name slgt2 python=3.7 -y
+conda create --name slgt2 python=3.9 -y
 conda activate slgt2
 ```
 
