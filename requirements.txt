@@ -1,0 +1,9 @@
+scipy
+terminaltables
+timm # 0.9.16
+einops # 0.7.0
+monai # 1.3.0
+ml_collections # 0.1.1
+cupy # 13.0.0 slowly
+yapf==0.40.0
+matplotlib

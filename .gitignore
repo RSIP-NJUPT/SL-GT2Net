@@ -1,0 +1,5 @@
+data/
+work_dirs/
+mmsegmentation.egg-info/
+.vscode/
+utils/
