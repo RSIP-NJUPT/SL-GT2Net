@@ -1,10 +1,14 @@
-# SAR Image Time Series for Land Cover Mapping via Sparse Local-Global Temporal Transformer Network (Under review)
+# SAR Image Time Series for Land Cover Mapping via Sparse Local-Global Temporal Transformer Network
 
-## Introduction
-<!-- Due to the effective embedding of temporal information, time-series SAR images can acquire more abundant land covers information, thereby effectively enhancing the accuracy of land cover mapping. However, the significant introduction of temporal features greatly increases the redundancy of deep features. Simultaneously, capturing the multi-scale global-local features of time-series SAR images effectively while considering temporal features has a significant influence on time-series SAR land cover mapping. Motivated by these, a sparse local-global temporal transformer network (SL-GT2Net) is proposed for time-series SAR land cover mapping. Specifically, to address redundant features and extract multiscale discriminative spatial features, we propose the novel and effective sparse multi-scale local window multi-head self-attention block (SMLW-MHSA) and sparse multi-scale global window multi-head self-attention block (SMGW-MHSA). In SMGW-MHSA, each token within each window in the query can interact with globally shared keys and values, achieving linear computational complexity with respect to the number of tokens. Additionally, to further refine spatial-temporal features, we propose the spatial-temporal channel refinement block (STCRB). The experimental results on three publicly available benchmark time-series SAR datasets demonstrate that our SL-GT2Net exhibits outstanding competitiveness compared to other state-of-the-art methods. -->
+Kang Ni, Chunyang Yuan, Zhizhong Zheng, Peng Wang
 
-If this codebase is helpful for you, please consider give me a star ⭐ 😊.
+## Abstract
+Due to the effective embedding of temporal information, time-series SAR images can acquire more abundant land covers information, thereby effectively enhancing the accuracy of land cover mapping. However, the significant introduction of temporal features greatly increases the redundancy of deep features. Simultaneously, capturing the global-local features of time-series SAR images effectively while considering temporal features has a significant influence on time-series SAR land cover mapping. Motivated by these, a sparse 3D Transformer network based on joint learning of temporal-spatial features, named <u>S</u>parse <u>L</u>ocal-<u>G</u>lobal <u>T</u>emporal <u>T</u>ransformer <u>Net</u>work (SL-GT2Net) is proposed for SAR land cover mapping, which has the ability to learn sparse global-local temporal-spatial features of SAR land covers. To emphasize crucial spatiotemporal features and suppress noise features, we propose a Spatial-Temporal Channel Refinement Block (STCRB) to mitigate feature redundancy. Additionally, we develop novel and effective Sparse Multi-scale Local Window Multi-Head Self-Attention (SMLW-MHSA) and Sparse Multi-scale Global Window Multi-Head Self-Attention (SMGW-MHSA) blocks. Both incorporate parallel multi-scale window partitioning and Top-K sparsification strategies to robustly model discriminative spatiotemporal features of land covers with vast scale variations, while maintaining linear complexity with respect to the number of tokens. The experimental results on three challenge time-series SAR datasets demonstrate that our SL-GT2Net exhibits outstanding competitiveness compared to other related networks. The code is available at [https://github.com/RSIP-NJUPT/SL-GT2Net](https://github.com/RSIP-NJUPT/SL-GT2Net).
 
+
+
+## Updates
+2025/06/02: Our paper has been accepted by IEEE Transactions on Aerospace and Electronic Systems.
 
 ## Usage
 
@@ -126,18 +130,23 @@ CUDA_VISIABLE_DEVICES=0,1,2,3 tools/dist_test.sh ${CONFIG_FILE} ${CHECKPOINT_FIL
 CUDA_VISIABLE_DEVICES=0,1,2,3 tools/dist_test.sh configs/slgt2/slgt2_224x224_40k_slovenia.py work_dirs/slgt2_224x224_40k_slovenia/train_20240530_032438/iter_40000.pth 4
 ```
 
-<!-- ## Citation
-  If you find TMANet is useful in your research, please consider citing:
+If this codebase is helpful for you, please consider give me a star ⭐ 😊.
+
+## Citation
+  If you find SL-GT2Net is useful in your research, please consider citing:
   ```shell
-  @inproceedings{wang2021temporal,
-  title={Temporal memory attention for video semantic segmentation},
-  author={Wang, Hao and Wang, Weining and Liu, Jing},
-  booktitle={2021 IEEE International Conference on Image Processing (ICIP)},
-  pages={2254--2258},
-  year={2021},
-  organization={IEEE}
-  }
-  ``` -->
+  @ARTICLE{TAES2025SL-GT2Net,
+    author={Ni, Kang and Yuan, Chunyang and Zheng, Zhizhong and Wang, Peng},
+    journal={IEEE Transactions on Aerospace and Electronic Systems}, 
+    title={SAR Image Time Series for Land Cover Mapping via Sparse Local-Global Temporal Transformer Network}, 
+    year={2025},
+    volume={},
+    number={},
+    pages={1-17},
+    keywords={Land surface;Transformers;Spatiotemporal phenomena;Time series analysis;Crops;Synthetic aperture radar;Radar polarimetry;Telecommunications;Remote sensing;Feature extraction;Deep learning;SAR land cover mapping;Spatial-temporal remote sensing images;Spatial-temporal self-attention;Vision transformer},
+    doi={10.1109/TAES.2025.3574022}
+    }
+  ```
 ## Acknowledgement
 Thanks [mmsegmentation](https://mmsegmentation.readthedocs.io/zh-cn/0.x/index.html) contribution to the community!
 
